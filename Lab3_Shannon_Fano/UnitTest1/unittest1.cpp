@@ -38,7 +38,7 @@ namespace UnitTest1
 			string Test = "аббв";
 			Frequencies(Test);
 			Codingiguess(Frequencies(Test));
-			string data = Codingiguess(Frequencies(Test)).find('á')->data;
+			string data = Codingiguess(Frequencies(Test)).find('б')->data;
 			Assert::AreEqual(Help, data);
 		}
 		TEST_METHOD(Freq)
