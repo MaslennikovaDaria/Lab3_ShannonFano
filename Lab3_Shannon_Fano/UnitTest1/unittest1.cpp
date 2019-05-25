@@ -19,7 +19,7 @@ namespace UnitTest1
 
 		TEST_METHOD(Codingiguess3symbolsSize)
 		{
-			string Test = "àáááâ";
+			string Test = "аббв";
 			Frequencies(Test);
 			Codingiguess(Frequencies(Test));
 			Assert::AreEqual(3, Codingiguess(Frequencies(Test)).get_size());
@@ -27,7 +27,7 @@ namespace UnitTest1
 		TEST_METHOD(Incoding3symbols)
 		{
 			string Help = "1000011";
-			string Test = "àáááâ";
+			string Test = "аббв";
 			Frequencies(Test);
 			Codingiguess(Frequencies(Test));
 			Assert::AreEqual(Help, incoding(Codingiguess(Frequencies(Test)),Test));
@@ -35,7 +35,7 @@ namespace UnitTest1
 		TEST_METHOD(CodingiuessCode)
 		{
 			string Help = "0";
-			string Test = "àáááâ";
+			string Test = "аббв";
 			Frequencies(Test);
 			Codingiguess(Frequencies(Test));
 			string data = Codingiguess(Frequencies(Test)).find('á')->data;
@@ -43,15 +43,15 @@ namespace UnitTest1
 		}
 		TEST_METHOD(Freq)
 		{
-			string Test = "àáááâ";
+			string Test = "аббв";
 			Frequencies(Test);
-			Assert::AreEqual(3, Frequencies(Test).find('á')->data);
+			Assert::AreEqual(3, Frequencies(Test).find('б')->data);
 		}
 		TEST_METHOD(Decode)
 		{
 			Map <char, string> chars_to_codes;
 			string incoded_quote;
-			string quote="åõàë ãðåêà";
+			string quote="ехал грека";
 			string decoded_quote;
 			getline(cin, quote);
 			chars_to_codes = Codingiguess(Frequencies(quote));
